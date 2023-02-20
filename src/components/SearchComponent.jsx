@@ -1,8 +1,14 @@
-function SearchComponent() {
+function SearchComponent({ searchText, setSearchText }) {
   return (
     <>
       <label>Search:</label>
-      <input></input>
+      <input
+        type="text"
+        value={searchText}
+        onChange={(e) => {
+          setSearchText(e.target.value);
+        }}
+      ></input>
     </>
   );
 }
